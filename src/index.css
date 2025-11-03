@@ -1,0 +1,133 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom toast styling */
+.Toastify__toast-container {
+  @apply z-[9999];
+}
+
+.Toastify__toast {
+  @apply rounded-lg shadow-lg font-medium;
+}
+
+.Toastify__toast--success {
+  @apply bg-success-500 text-white;
+}
+
+.Toastify__toast--error {
+  @apply bg-danger-500 text-white;
+}
+
+.Toastify__toast--info {
+  @apply bg-info-500 text-white;
+}
+
+.Toastify__toast--warning {
+  @apply bg-warning-500 text-white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.15s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.25s ease-out;
+}
+
+/* Course color dots */
+.course-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Progress ring */
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+/* Form styles */
+input:focus,
+textarea:focus,
+select:focus {
+  @apply outline-none ring-2 ring-primary-500 border-primary-500;
+}
+
+/* Card hover effects */
+.card-hover:hover {
+  transform: scale(1.02);
+  transition: transform 150ms ease-out;
+}
+
+/* Button animations */
+.btn-hover:hover {
+  transform: scale(1.02);
+  transition: transform 150ms ease-out;
+}
+
+/* Priority badge styles */
+.priority-high {
+  @apply bg-danger-100 text-danger-700 border border-danger-200;
+}
+
+.priority-medium {
+  @apply bg-warning-100 text-warning-700 border border-warning-200;
+}
+
+.priority-low {
+  @apply bg-info-100 text-info-700 border border-info-200;
+}
+
+/* Due date indicators */
+.due-green {
+  @apply text-success-600 bg-success-50;
+}
+
+.due-amber {
+  @apply text-warning-600 bg-warning-50;
+}
+
+.due-red {
+  @apply text-danger-600 bg-danger-50;
+}
+
+/* Sidebar active state */
+.nav-item-active {
+  @apply bg-primary-50 text-primary-700 border-r-2 border-primary-500;
+}
+
+.nav-item-active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #4f46e5 0%, #7c3aed 100%);
+}
